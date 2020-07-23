@@ -92,5 +92,7 @@ public class StringExcerises1 {
         System.out.println(someChar);
         System.out.println(someVal);
         System.out.println(intvAlueOfB);
+        String appleBananas = appleName.concat(bananaName);
+        System.out.println(">>>> I am an applename after concat "+appleName);
     }
 }
