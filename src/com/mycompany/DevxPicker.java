@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DevxPicker {
 
     public static void main(String[] args) {
-        final int NUMBER_OF_STUDENTS = 17;
+        final int NUMBER_OF_STUDENTS = 19;
 
         Scanner userInput = new Scanner(System.in);
 
@@ -72,8 +72,11 @@ public class DevxPicker {
                     break;
                 }
 	    case 17:
-		System.out.println("Oksana");
-		break;
+		    System.out.println("Oksana");
+		    break;
+            case 18:
+                System.out.println("Gulnaz");
+                break;
             default:
                 System.out.println("Please try again!");
                 break;
