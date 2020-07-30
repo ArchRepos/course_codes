@@ -20,5 +20,18 @@ public class LoopExsc2 {
            }
        } while(isValidInput);
 
+
+        int sum = 0;
+        for(int i = 1; i < 10; i++){
+            if(isEven(i)){
+                System.out.println(i);
+                sum += i;
+            }else{
+                System.out.println("odd");
+            }
+        }
+    }
+    public static boolean isEven(int number){
+        return number % 2 == 0;
     }
 }
