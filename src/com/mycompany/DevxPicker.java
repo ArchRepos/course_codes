@@ -1,4 +1,4 @@
-package com.mycompany;
+//package com.mycompany;
 
 import java.util.Random;
 import java.util.Scanner;
