@@ -1,9 +1,11 @@
 package com.mycompany;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class ListExcs2 {
-    
+
     public static void main(String[] args){
         String[] cities = {"Chicago", "NY", "SF", "London", "Johannesburg", "Bishkek", "Almaty","NY", "Almaty","London"};
 
@@ -11,6 +13,18 @@ public class ListExcs2 {
         for (int i = 0; i <cities.length; i++ ) {
             listOfCities.add(cities[i]);
         }
+
+        ArrayList listOfObjects = new ArrayList();
+
+        listOfObjects.add("city");
+        listOfObjects.add("country");
+        listOfObjects.add(5);
+
+        Object[] arrayOfObjects = listOfObjects.toArray();
+
+        String[] citiesConverted = listOfCities.toArray(new String[0]);
+
+        List<String> listOfCities2 = Arrays.asList(cities);
 
         System.out.println(listOfCities.toString());
 
