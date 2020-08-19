@@ -27,11 +27,9 @@ public class ListExcrs3 {
         Integer[] points = {50, 78, 17, 100, 99};
         int[] f = {1,2,3,4};
 
-
         List<Integer> pointsList = Arrays.asList(points);
-        for(int i=0; i< f.length;i++)
-            pointsList.add(f[i]);
-
+        for(int i=0; i < f.length;i++)
+            pointsList.remove(4);
         System.out.println(Collections.min(pointsList));
         System.out.println(Collections.max(pointsList));
 
