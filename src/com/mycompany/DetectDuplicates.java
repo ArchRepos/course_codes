@@ -11,10 +11,11 @@ public class DetectDuplicates {
             for (int j = i + 1; j < strB.length(); j++){
                 if (strB.charAt(i) == strB.charAt(j)){
                     duplicateCounter++;
+                    strB.deleteCharAt(j);
                 }
             }
-            strB.deleteCharAt(i);
             System.out.println(strB.charAt(i)+ " has "+ duplicateCounter + "of duplicates");
+
         }
     }
 }
