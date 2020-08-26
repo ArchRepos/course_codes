@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ListLongestStringFix {
 
-    public static String findLongest(ArrayList<String> list)
+    public String findLongest(ArrayList<String> list)
     {
         String longestString = list.get(0);
         for (int i = 1; i < list.size(); i++){
@@ -16,6 +16,7 @@ public class ListLongestStringFix {
 
     public static void main(String[] args)
     {
+        ListLongestStringFix lst = new ListLongestStringFix();
         //instantiate ArrayList and fill with Integers
         ArrayList<String> values = new ArrayList<String>();
         String[] words = {"singapore", "cattle", "metropolitan", "turnstile", "verylongstring"};
@@ -25,6 +26,6 @@ public class ListLongestStringFix {
         }
         System.out.println("Expected Result:\t metropolitan");
         System.out.print("Your Result:\t\t ");
-        System.out.println(findLongest(values));
+        System.out.println(lst.findLongest(values));
     }
 }
