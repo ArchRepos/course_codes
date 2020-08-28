@@ -19,14 +19,21 @@ public class HKListSolution {
         Integer numberOfQueries = userInput.nextInt();
         while (numberOfQueries > 0) {
             String query = userInput.next();
-            if (query.toLowerCase().equals("delete")) {
-                int index = userInput.nextInt();
-                numberList.remove(Math.abs(index));
-            }
-            if (query.toLowerCase().equals("insert")) {
-                int index = userInput.nextInt();
-                int element = userInput.nextInt();
-                numberList.add(Math.abs(index), element);
+            switch (query.toLowerCase()){
+                case "delete":
+                    int index = userInput.nextInt();
+                    numberList.remove(Math.abs(index));
+                    break;
+                case "insert":
+                    int indexInsert = userInput.nextInt();
+                    int element = userInput.nextInt();
+                    numberList.add(Math.abs(indexInsert), element);
+                    break;
+                case "add":
+                    int elementAdd = userInput.nextInt();
+                    numberList.add(0, elementAdd);
+                    break;
+                default:
             }
             numberOfQueries--;
         }
@@ -35,5 +42,4 @@ public class HKListSolution {
             System.out.print(element+" ");
         }
     }
-
 }
