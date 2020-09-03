@@ -25,6 +25,24 @@ public class HashMapExscs2 {
 
         System.out.println(testMap.toString());
 
+        System.out.println("getting values by etrySet ");
+        Set<Map.Entry<String, String>> entries = emailsNamesMap.entrySet();
+        for (Map.Entry<String, String> entry: entries) {
+            System.out.println(entry.getKey() +"  "+entry.getValue());
+            if (entry.getKey().contains("student1")) {
+                System.out.println("I am updating set not map");
+                entry.setValue("StundentN1");
+            }
+        }
+
+        System.out.println("I am updating map not set");
+        emailsNamesMap.put("student2@test.com", "StundentN2");
+
+        System.out.println("this is output of map: "+emailsNamesMap.values().toString());
+        System.out.println("this is output of a set");
+        for (Map.Entry<String, String> entry: entries) {
+            System.out.println(entry.getKey() +"  "+entry.getValue());
+        }
     }
 
     public static HashMap<String, String> copyMaps(Map<String, String> srcMap){
