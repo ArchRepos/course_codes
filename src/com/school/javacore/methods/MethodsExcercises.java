@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class MethodsExcercises {
 
     public static void main(String[] args){
+        MethodsExcercises methodsExcercises = new MethodsExcercises();
+
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter 3 numbers.");
         int a = userInput.nextInt();
@@ -13,10 +15,10 @@ public class MethodsExcercises {
         int c = userInput.nextInt();
         //int minValue = findSmallest(a,b,c);
 
-        System.out.println("the minimum of numbers "+a+" "+b+" and  "+c+" is "+ findSmallest(a, b, c));
+        System.out.println("the minimum of numbers "+a+" "+b+" and  "+c+" is "+ methodsExcercises.findSmallest(a, b, c));
         System.out.println("the average of numbers "+a+" "+b+" and  "+c+" is "+ calculateAverage(a, b, c));
         System.out.println("I toss the coin and it is "+ tossTheCoin());
-        System.out.println("the lone sum of numbers "+a+" "+b+" and  "+c+" is "+ loneSum(a, b, c));
+        System.out.println("the lone sum of numbers "+a+" "+b+" and  "+c+" is "+ methodsExcercises.loneSum(a, b, c));
 
         System.out.println("Please enter radiuis of the circle");
         double radius = userInput.nextDouble();
@@ -41,7 +43,7 @@ public class MethodsExcercises {
     }
 
     //Exc1: Write a Java method to find the smallest number among three numbers
-    public static int findSmallest(int a, int b, int c){
+    public int findSmallest(int a, int b, int c){
 
         if (a < b && a < c){
             return a;
@@ -76,7 +78,7 @@ public class MethodsExcercises {
     }
 
     //exc3: Given 3 int values, a b c, return their sum. However, if one of the values is the same as another of the values, it does not count towards the sum.
-    public static int loneSum(int a, int b, int c){
+    public int loneSum(int a, int b, int c){
         if (a == b && a == c) {
             a = 0;
             b = 0;
