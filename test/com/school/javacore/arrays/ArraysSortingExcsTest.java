@@ -30,7 +30,7 @@ public class ArraysSortingExcsTest {
         assertTrue("after sorting the order must be like in array2", Arrays.equals(array1, array2));
 
         int[] array3 = {10, 1, 4, 3, 7};
-        assertFalse("after sorting the order must not be like in array3", Arrays.equals(array1, array2));
+        assertFalse("after sorting the order must not be like in array3", Arrays.equals(array1, array3));
 
     }
 
