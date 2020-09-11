@@ -2,6 +2,10 @@ package com.school.javacore.oop;
 
 public class Book {
 
+    public static String className(){
+        return "I am a static method from book class";
+    }
+
     public Book(int price, String name) {
         this.price = price;
         this.name = name;
