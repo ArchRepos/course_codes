@@ -13,8 +13,8 @@ public class RestaurantDemoApp {
 
     public RestaurantDemoApp() {
         User user1 = new User("user1", "s3cr3t");
-        User user2 = new User("user2", "s3cr3t");
-        User user3 = new User("user3", "s3cr3t");
+        User user2 = new User("user2", "s3cr4t");
+        User user3 = new User("user3", "s3cr5t");
         this.userList.add(user1);
         this.userList.add(user2);
         this.userList.add(user3);
@@ -110,6 +110,16 @@ public class RestaurantDemoApp {
         }
         return isLoginSuccessful;
     }
+
+    public User login2(String username, String password) {
+        User result = null;
+        for (User u: this.userList) {
+            if (u.getUsername().equals(username) && u.getPassword().equals(password))
+                result = u;
+        }
+        return result;
+    }
+
 
 
 }
