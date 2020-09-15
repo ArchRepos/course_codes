@@ -56,6 +56,8 @@ public class RestaurantDemoAppTest {
         for (Food f: listOfFoods) {
             assertThat(f.getName(), is(containsString("appetizer")));
         }
+        
+        //somechanges
 
     }
 }
