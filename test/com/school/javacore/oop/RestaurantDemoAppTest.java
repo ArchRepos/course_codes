@@ -49,15 +49,30 @@ public class RestaurantDemoAppTest {
         assertThat(listOfFoods, is(notNullValue()));
         assertThat(listOfFoods.size(), is(equalTo(9)));
 
-        listOfFoods = restaurantDemoApp.getMeMenu("appetizer");
+        listOfFoods = restaurantDemoApp.getMeMenu("APPETIZER");
         assertThat(listOfFoods, is(notNullValue()));
         assertThat(listOfFoods.size(), is(equalTo(3)));
 
         for (Food f: listOfFoods) {
             assertThat(f.getName(), is(containsString("appetizer")));
         }
-        
-        //somechanges
+
+        listOfFoods = restaurantDemoApp.getMeMenu("DRINK");
+        assertThat(listOfFoods, is(notNullValue()));
+        assertThat(listOfFoods.size(), is(equalTo(3)));
+
+        for (Food f: listOfFoods) {
+            assertThat(f.getName(), is(containsString("rink")));
+        }
+
+        listOfFoods = restaurantDemoApp.getMeMenu("MDISH");
+        assertThat(listOfFoods, is(notNullValue()));
+        assertThat(listOfFoods.size(), is(equalTo(3)));
+
+        for (Food f: listOfFoods) {
+            assertThat(f.getName().toLowerCase(), is(containsString("dish")));
+        }
+
 
     }
 }

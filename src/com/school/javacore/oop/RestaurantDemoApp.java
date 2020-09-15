@@ -126,25 +126,14 @@ public class RestaurantDemoApp {
         //key = drinks --> return only drinks
         //key = mdish --> retrun only mdishes
         ArrayList<Food> menuList = new ArrayList<>();
-        switch (key){
-            case "all":
-                for (ArrayList<Food> foods: menu.values()){
-                    menuList.addAll(foods);
-                }
-                break;
-            case "appetizer":
-                menuList.addAll(menu.get("APPETIZER"));
-                break;
-            case "drinks":
-                menuList.addAll(menu.get("DRINK"));
-                break;
-            case "mdish":
-                menuList.addAll(menu.get("MDISH"));
-                break;
+
+        if (key.equals("all")) {
+            for (ArrayList<Food> foods: menu.values()){
+                menuList.addAll(foods);
+            }
+        } else {
+            menuList.addAll(menu.get(key));
         }
         return menuList;
     }
-
-
-
 }
