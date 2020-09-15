@@ -1,10 +1,15 @@
 package com.school.javacore.oop;
 
+import org.hamcrest.core.StringContains;
 import org.junit.Test;
+
+import java.util.ArrayList;
+
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+
 import static org.junit.Assert.*;
 
 public class RestaurantDemoAppTest {
@@ -34,5 +39,23 @@ public class RestaurantDemoAppTest {
         assertThat(user1, is(notNullValue()));
         assertThat(user1.getUsername(), is(equalTo("user1")));
         assertThat(user1.getPassword(), is(equalTo("s3cr3t")));
+    }
+
+    @Test
+    public void testGetMeMenu(){
+        ArrayList<Food> listOfFoods;
+
+        listOfFoods = restaurantDemoApp.getMeMenu("all");
+        assertThat(listOfFoods, is(notNullValue()));
+        assertThat(listOfFoods.size(), is(equalTo(9)));
+
+        listOfFoods = restaurantDemoApp.getMeMenu("appetizer");
+        assertThat(listOfFoods, is(notNullValue()));
+        assertThat(listOfFoods.size(), is(equalTo(3)));
+
+        for (Food f: listOfFoods) {
+            assertThat(f.getName(), is(containsString("appetizer")));
+        }
+
     }
 }
