@@ -34,31 +34,43 @@ public class RationalTest {
     public void testNegate(){
         Rational r2 = new Rational(3,4);
         r2.negate();
-        assertThat(r2.toString(), is(containsString("-")));
+        assertThat(r2.calculateSign(), is(-1));
 
         r2.setNumerator(5);
         r2.setDenominator(-9);
         r2.negate();
-
-        assertThat(r2.toString(), is(not(containsString("-"))));
+        assertThat(r2.calculateSign(), is(1));
 
     }
 
     @Test
     public void testGetSign(){
         Rational r3 = new Rational(4,5);
-        assertThat(r3.getSign(), is(1));
+        assertThat(r3.calculateSign(), is(1));
 
         r3.setDenominator(-7);
-        assertThat(r3.getSign(), is(-1));
+        assertThat(r3.calculateSign(), is(-1));
 
         r3.setDenominator(7);
         r3.setNumerator(-5);
-        assertThat(r3.getSign(), is(-1));
+        assertThat(r3.calculateSign(), is(-1));
 
         r3.setDenominator(-7);
         r3.setNumerator(-5);
-        assertThat(r3.getSign(), is(1));
+        assertThat(r3.calculateSign(), is(1));
+
+    }
+
+    @Test
+    public void testRevert(){
+        Rational number1 = new Rational(5,6);
+
+        assertThat(number1.getNumerator(), is(5));
+        assertThat(number1.getDenominator(), is(6));
+
+        number1.revert();
+        assertThat(number1.getNumerator(), is(6));
+        assertThat(number1.getDenominator(), is(5));
 
     }
 

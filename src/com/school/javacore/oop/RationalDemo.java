@@ -17,6 +17,6 @@ public class RationalDemo {
         rational1.setDenominator(-7);
 
         System.out.println(rational1.toString());
-        System.out.println("sign check "+ rational1.getNumerator()/rational1.getDenominator()+ " "+rational1.getSign());
+        System.out.println("sign check "+ rational1.getNumerator()/rational1.getDenominator()+ " "+rational1.calculateSign());
     }
 }

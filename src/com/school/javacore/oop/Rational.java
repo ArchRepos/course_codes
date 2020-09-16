@@ -14,12 +14,14 @@ public class Rational {
     public Rational() {
         this.numerator = 0;
         this.denominator = 1;
+        this.sign = calculateSign();
     }
     //7. Write a second constructor that takes two arguments and uses them to
     //    initialize the instance variables.
     public Rational(int numerator, int denominator){
         this.numerator = numerator;
         this.denominator = denominator;
+        this.sign = calculateSign();
     }
 
     public int getNumerator() {
@@ -38,11 +40,11 @@ public class Rational {
         this.denominator = denominator;
     }
 
-    public int getSign() {
+    public int calculateSign() {
         double result = (double) this.numerator / (double) this.denominator;
-
         return result < 0 ? -1 : 1;
     }
+
     //3. Write an instance method called printRational that displays a Rational
     //in some reasonable format.
 
@@ -57,13 +59,20 @@ public class Rational {
     }
 
     public void negate(){
-        this.sign = -1 * getSign();
+        this.sign = -1 * calculateSign();
+    }
+
+    public void revert(){
+        int tmp = this.numerator;
+        this.numerator = this.denominator;
+        this.denominator = tmp;
     }
 /*
 
 8. Write an instance method called negate that reverses the sign of a ra-
     tional number. This method should be a modifier, so it should be void.
     Add lines to main to test the new method.
+
 9. Write an instance method called invert that inverts the number by
     swapping the numerator and denominator. It should be a modifier. Add
     lines to main to test the new method.*/
