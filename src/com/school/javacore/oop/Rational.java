@@ -67,6 +67,14 @@ public class Rational {
         this.numerator = this.denominator;
         this.denominator = tmp;
     }
+
+    public double toDouble(){
+        return (double) numerator / (double) denominator;
+    }
+
+    public void addIntger(int number){
+        this.numerator = this.numerator + (number * denominator);
+    }
 /*
 
 8. Write an instance method called negate that reverses the sign of a ra-
@@ -75,5 +83,9 @@ public class Rational {
 
 9. Write an instance method called invert that inverts the number by
     swapping the numerator and denominator. It should be a modifier. Add
-    lines to main to test the new method.*/
+    lines to main to test the new method.
+
+11. Write an instance method called add that takes a integer number as
+an argument, adds it to this, and returns a new Rational object.
+    */
 }

@@ -74,4 +74,20 @@ public class RationalTest {
 
     }
 
+    @Test
+    public void testTopDouble(){
+        Rational numberR = new Rational(4,2);
+        assertThat(numberR.toDouble(), is(2.0));
+    }
+
+    @Test
+    public void testAddInteger(){
+        Rational numberR = new Rational(5,6);
+        numberR.addIntger(1);
+        assertThat(numberR.getNumerator(), is(11));
+        assertThat(numberR.getDenominator(), is(6));
+
+
+    }
+
 }
