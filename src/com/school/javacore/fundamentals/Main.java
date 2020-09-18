@@ -1,6 +1,6 @@
 package com.school.javacore.fundamentals;
 
-import com.mypackage.MyFavoriteMovie;
+
 import java.util.Random;
 
 public class Main {

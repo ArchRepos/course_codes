@@ -8,16 +8,14 @@ public class CardDemo {
 
         Random rnd = new Random();
 
-        Card myCard = new Card(rnd.nextInt(4), rnd.nextInt(14));
+        Card myCard = new Card(3, 11);
 
-        System.out.println(myCard);
+        System.out.println("--" + myCard);
 
         for (int i = 0; i < 10; i++) {
             Card tempCard = new Card(rnd.nextInt(4), rnd.nextInt(14));
             System.out.println(tempCard);
             System.out.println(myCard.equals(tempCard));
         }
-
-
     }
 }
