@@ -41,5 +41,4 @@ public class Deck {
             swap(x, y);
         }
     }
-
 }
