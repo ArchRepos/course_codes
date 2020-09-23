@@ -13,7 +13,7 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.numberOfcourses = this.courses.size();
+        this.numberOfcourses = 0;
     }
 
     public void addCourse(Course course) {
@@ -35,11 +35,11 @@ public class Student {
     }
 
     public Double calculateGradeAverage(){
-        int sum = 0;
+        double sum = 0;
         for (Course c: this.courses){
             sum += c.getGrades();
         }
-        return (double) sum / (double) this.numberOfcourses;
+        return  sum / (double) this.numberOfcourses;
     }
 
     public String toString(){
