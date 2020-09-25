@@ -36,6 +36,10 @@ public class Food {
         this.ingredients = ingredients;
     }
 
+    public void print(){
+        System.out.println("I am a Food!");
+    }
+
     @Override
     public String toString() {
         return "Food{" +

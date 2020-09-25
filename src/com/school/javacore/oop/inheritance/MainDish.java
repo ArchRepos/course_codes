@@ -10,4 +10,9 @@ public class MainDish extends Food{
     public String toString() {
         return "MainDish { " + super.toString()+"}";
     }
+
+    @Override
+    public void print(){
+        System.out.println("I am a MainDish!");
+    }
 }

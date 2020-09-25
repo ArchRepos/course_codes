@@ -62,8 +62,10 @@ public class RestaurantDemoApp {
             switch (userControl){
                 case 1:
                     for (Food f: restaurantDemoApp.menuList) {
-                        if (f instanceof Appetizer) {
+                        if (f.getClass().equals(Appetizer.class)) {
+                            ((Appetizer) f).onlyInAppetizer();
                             System.out.println(f);
+                            f.print();
                         }
                     }
                     break;
@@ -71,6 +73,7 @@ public class RestaurantDemoApp {
                     for (Food f: restaurantDemoApp.menuList) {
                         if (f instanceof MainDish) {
                             System.out.println(f);
+                            f.print();
                         }
                     }
                     break;
@@ -78,6 +81,7 @@ public class RestaurantDemoApp {
                     for (Food f: restaurantDemoApp.menuList) {
                         if (f instanceof Drink) {
                             System.out.println(f);
+                            f.print();
                             System.out.println(((Drink) f).getPrice(1000));
                         }
                     }
