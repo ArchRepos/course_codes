@@ -2,7 +2,7 @@ package com.school.javacore.oop.interfaces;
 
 import java.util.ArrayList;
 
-public class PhoneBook implements SearchableModifiable{
+public class PhoneBook implements SearchableModifiable {
     private ArrayList<Person> contacts = new ArrayList<>();
 
     @Override
@@ -29,4 +29,5 @@ public class PhoneBook implements SearchableModifiable{
     public ArrayList<Person> listContacts() {
         return contacts;
     }
+    
 }
